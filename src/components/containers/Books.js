@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DocumentTitle from 'react-document-title';
 import '../../css/Books.css';
 
 import * as APIService from '../../api/APIService';
@@ -16,12 +17,9 @@ class Books extends Component {
 
     render() {
         return (
-            <div className="App">
-                <p className="App-intro">
-                    Books
-                </p>
-
-                <div>
+            <div className="App container">
+                <DocumentTitle title='Books - Ice and Fire The Series' />
+                <div className="row pushDown">
                     <BookList books={this.props.books} />
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DocumentTitle from 'react-document-title';
 import '../../css/Characters.css';
 
 import * as APIService from '../../api/APIService';
@@ -16,10 +17,7 @@ class Characters extends Component {
     render() {
         return (
             <div className="App">
-                <p className="App-intro">
-                    Characters
-                </p>
-
+                <DocumentTitle title='Characters - Ice and Fire The Series' />
                 <div>
                     <CharacterList characters={this.props.characters} />
                 </div>

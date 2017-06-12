@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DocumentTitle from 'react-document-title';
 import '../../css/Homes.css';
 
 import * as APIService from '../../api/APIService';
@@ -17,9 +18,8 @@ class Homes extends Component {
     render() {
         return (
             <div className="App">
-                <p className="App-intro">
-                    Homes
-                </p>
+
+                <DocumentTitle title='Homes - Ice and Fire The Series' />
 
                 <div>
                     <HomeList homes={this.props.homes} />

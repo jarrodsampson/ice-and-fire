@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import DocumentTitle from 'react-document-title';
 // Using "Stateless Functional Components"
 export default function(props) {
     return (
         <div className="home">
+            <DocumentTitle title={props.name + " -  Ice and Fire The Series"} />
             <div>
                 <Button onClick={props.goBack}>Back</Button>
             </div>

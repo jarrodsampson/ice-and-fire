@@ -8,10 +8,10 @@ import { LinkContainer } from 'react-router-bootstrap';
 export default function(props) {
     return (
         <div className="App">
-            <Navbar inverse collapseOnSelect>
+            <Navbar inverse fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <NavLink exact to="/">Home</NavLink>
+                        <NavLink exact to="/">Ice and Fire</NavLink>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -29,15 +29,34 @@ export default function(props) {
 
                     </Nav>
                     <Nav pullRight>
-                        <NavItem eventKey={1} href="#">Link Right</NavItem>
-                        <NavItem eventKey={2} href="#">Link Right</NavItem>
+                        {/*<NavItem eventKey={3.1} href="https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire" target="_blank">More</NavItem>
+                        <NavItem href="https://anapioficeandfire.com/" target="_blank">API</NavItem>*/}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
 
-            <div className="container">
+            <div className="wrapper">
                 {props.children}
             </div>
+
+
+
+            <div className="copyright">
+                <div className="container">
+                    <div className="col-md-6">
+                        <p>© 2017 - Planlodge</p>
+                    </div>
+                    <div className="col-md-6">
+                        <ul className="bottom_ul">
+                            <li><a rel="noopener noreferrer" href="https://planlodge.com" target="_blank">Portfolio</a></li>
+                            <li><a rel="noopener noreferrer" href="https://github.com/planlodge" target="_blank">GitHub</a></li>
+                            <li><a rel="noopener noreferrer" href="https://www.linkedin.com/in/jarrodsampson/" target="_blank">LinkedIn</a></li>
+                            <li><a rel="noopener noreferrer" href="https://angel.co/jarrod-sampson" target="_blank">AngelList</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     );
