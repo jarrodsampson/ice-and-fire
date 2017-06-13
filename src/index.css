@@ -13,6 +13,49 @@ body {
     margin-top:50px;
 }
 
+.paddingExtra {
+    padding:1em;
+}
+
+
+.scrollTop {
+    position: fixed;
+    bottom: 3em;
+    right: 1em;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+.scrollTop span {
+    font-size: 20pt;
+    color: white;
+}
+
+.list-holder {
+    max-width: 1000px;
+    margin: auto;
+    padding: 3em;
+}
+
+.listItem {
+    border: 1px solid #eee;
+    padding: 1em;
+}
+
+.listItem a {
+    color: black;
+    font-size: 16pt;
+    text-decoration: none;
+}
+
+.listItem span {
+    cursor: pointer;
+    float: right;
+    margin-top: .3em;
+}
+
 .copyright { min-height:40px; background-color:#000000;position:fixed;bottom:0;left:0;width:100%;}
         .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
         .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}

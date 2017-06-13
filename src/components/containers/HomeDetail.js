@@ -13,6 +13,7 @@ class HomeDetail extends Component {
     }
     componentDidMount() {
         this.getContent(this.props.match.params.id);
+        this.forceUpdate();
     }
 
     render() {
@@ -20,7 +21,7 @@ class HomeDetail extends Component {
             <div className="App">
 
                 <div>
-                    <House {...this.props.house} goBack={APIService.goBack} />
+                    <House {...this.props} goBack={APIService.goBack} />
                 </div>
             </div>
         );
@@ -29,7 +30,11 @@ class HomeDetail extends Component {
 
 const mapStateToProps = function(store) {
     return {
-        house: store.api.house
+        house: store.api.house,
+        overlord: store.api.overlord,
+        founder: store.api.founder,
+        currentLord: store.api.currentLord,
+        swornMembers: store.api.swornMembers
     };
 };
 

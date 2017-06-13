@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
+
 import '../../css/Homes.css';
 
 import * as APIService from '../../api/APIService';
 import { connect } from 'react-redux';
+
 import HomeList from '../views/HomeList';
 
 class Homes extends Component {
 
-    getContent() {
-        APIService.getAllHouses();
+    getContent(page, size) {
+        APIService.getAllHouses(page, size);
     }
     componentDidMount() {
-        this.getContent();
+        this.getContent(1, 50);
     }
 
     render() {
@@ -24,6 +26,7 @@ class Homes extends Component {
                 <div>
                     <HomeList homes={this.props.homes} />
                 </div>
+
             </div>
         );
     }

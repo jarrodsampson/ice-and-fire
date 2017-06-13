@@ -41,3 +41,31 @@ export function getHouseDetailSuccess(house) {
         house
     };
 }
+
+export function getOverLordSuccess(overlord) {
+    return {
+        type: types.GET_OVERLORD_SUCCESS,
+        overlord
+    };
+}
+
+export function getFounderSuccess(founder) {
+    return {
+        type: types.GET_FOUNDER_SUCCESS,
+        founder
+    };
+}
+
+export function getCurrentLordSuccess(currentLord) {
+    return {
+        type: types.GET_CURRENT_LORD_SUCCESS,
+        currentLord
+    };
+}
+
+export function getSwornSuccess(sworn) {
+    return {
+        type: types.GET_SWORN_SUCCESS,
+        sworn
+    };
+}

@@ -7,11 +7,11 @@ import { connect } from 'react-redux';
 import CharacterList from '../views/CharacterList';
 class Characters extends Component {
 
-    getContent() {
-        APIService.getAllCharacters();
+    getContent(page, size) {
+        APIService.getAllCharacters(page, size);
     }
     componentDidMount() {
-        this.getContent();
+        this.getContent(1, 50);
     }
 
     render() {

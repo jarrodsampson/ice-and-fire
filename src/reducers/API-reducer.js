@@ -10,7 +10,16 @@ const initialState = {
         aliases: []
     },
     houses: [],
-    house: {}
+    house: {
+        ancestralWeapons: [],
+        cadetBranches: [],
+        titles: [],
+        seats: []
+    },
+    founder: {},
+    overlord: {},
+    currentLord: {},
+    swornMembers: []
 };
 
 
@@ -30,6 +39,14 @@ const APIReducer = function(state = initialState, action) {
             return Object.assign({}, state, { houses: action.houses });
         case types.GET_HOUSE_DETAIL_SUCCESS:
             return Object.assign({}, state, { house: action.house });
+        case types.GET_OVERLORD_SUCCESS:
+            return Object.assign({}, state, { overlord: action.overlord });
+        case types.GET_FOUNDER_SUCCESS:
+            return Object.assign({}, state, { founder: action.founder });
+        case types.GET_CURRENT_LORD_SUCCESS:
+            return Object.assign({}, state, { currentLord: action.currentLord });
+        case types.GET_SWORN_SUCCESS:
+            return Object.assign({}, state, { swornMembers: action.sworn });
         default:
 
     }

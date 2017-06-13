@@ -4,44 +4,52 @@ import {
 } from 'react-router-dom'
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Headroom from 'react-headroom';
+import Back2Top from 'react-back2top';
+import { Glyphicon } from 'react-bootstrap';
 
 export default function(props) {
     return (
         <div className="App">
-            <Navbar inverse fixedTop collapseOnSelect>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <NavLink exact to="/">Ice and Fire</NavLink>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav>
-                        <LinkContainer to="/books">
-                            <NavItem>Books</NavItem>
-                        </LinkContainer>
-                        <LinkContainer to="/characters">
-                            <NavItem>Characters</NavItem>
-                        </LinkContainer>
-                        <LinkContainer to="/homes">
-                            <NavItem>Homes</NavItem>
-                        </LinkContainer>
+            <Headroom>
+                <Navbar inverse collapseOnSelect>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <NavLink exact to="/">Ice and Fire</NavLink>
+                        </Navbar.Brand>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                        <Nav>
+                            <LinkContainer to="/books">
+                                <NavItem>Books</NavItem>
+                            </LinkContainer>
+                            <LinkContainer to="/characters">
+                                <NavItem>Characters</NavItem>
+                            </LinkContainer>
+                            <LinkContainer to="/homes">
+                                <NavItem>Homes</NavItem>
+                            </LinkContainer>
 
-                    </Nav>
-                    <Nav pullRight>
-                        {/*<NavItem eventKey={3.1} href="https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire" target="_blank">More</NavItem>
-                        <NavItem href="https://anapioficeandfire.com/" target="_blank">API</NavItem>*/}
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+                        </Nav>
+                        <Nav pullRight>
+                            {/*<NavItem eventKey={3.1} href="https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire" target="_blank">More</NavItem>
+                            <NavItem href="https://anapioficeandfire.com/" target="_blank">API</NavItem>*/}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </Headroom>
 
-            <div className="wrapper">
+            <div className="">
                 {props.children}
             </div>
 
-
+            <Back2Top>
+                <div className="scrollTop"><Glyphicon glyph="arrow-up" /></div>
+            </Back2Top>
 
             <div className="copyright">
+
                 <div className="container">
                     <div className="col-md-6">
                         <p>© 2017 - Planlodge</p>

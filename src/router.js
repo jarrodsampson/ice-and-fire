@@ -16,7 +16,7 @@ import NotFound from './components/containers/NotFound';
 import Navigation from './components/layouts/Navigation';
 
 export default (
-    <Router>
+    <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Navigation>
             <Switch>
                 <Route exact path="/" component={Home}/>
